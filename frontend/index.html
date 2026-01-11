@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Biblioteca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>📚 Gestão de Biblioteca</h1>
+</header>
+
+<main>
+
+    <!-- === CADASTRO === -->
+    <section id="cadastro">
+        <h2>Cadastrar Novo Livro</h2>
+
+        <!-- ID MANTIDO (equivalente ao original) -->
+        <form id="formLivro">
+            <input type="text" id="titulo" placeholder="Título do livro" required>
+            <input type="text" id="autor" placeholder="Autor" required>
+            <input type="text" id="genero" placeholder="Gênero" required>
+
+            <input type="number" id="anoPublicacao" placeholder="Ano de publicação" required>
+            <input type="number" id="paginas" placeholder="Número de páginas" required>
+            <input type="number" id="preco" placeholder="Preço (R$)" step="0.01" required>
+
+            <select id="status" required>
+                <option value="disponivel">Disponível</option>
+                <option value="emprestado">Emprestado</option>
+            </select>
+
+            <input type="text" id="capa" placeholder="URL da capa (opcional)">
+            <button type="submit">Cadastrar Livro</button>
+        </form>
+    </section>
+
+    <!-- === FILTROS === -->
+    <section id="filtros">
+        <h2>Filtrar Livros</h2>
+
+        <!-- MESMA ESTRUTURA DO ORIGINAL -->
+        <div id="filterForm">
+            <input type="text" id="filtroAutor" placeholder="Autor">
+            <input type="text" id="filtroTitulo" placeholder="Título">
+            <input type="number" id="filtroAno" placeholder="Ano">
+            <input type="number" id="filtroPreco" placeholder="Preço máximo">
+
+            <select id="filtroStatus">
+                <option value="">Todos</option>
+                <option value="disponivel">Disponível</option>
+                <option value="emprestado">Emprestado</option>
+            </select>
+
+            <button id="btnFiltrar">Filtrar</button>
+            <button id="btnLimpar">Limpar</button>
+        </div>
+    </section>
+
+    <!-- === LISTAGEM === -->
+    <section id="lista">
+        <h2>Acervo da Biblioteca</h2>
+        <div id="cardsContainer" class="cards-container"></div>
+    </section>
+
+</main>
+
+<footer>
+    <p>Trabalho de Engenharia de Software - FECAF © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
