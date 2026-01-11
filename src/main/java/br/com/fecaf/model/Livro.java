@@ -1,4 +1,4 @@
-ppackage br.com.fecaf.model;
+package br.com.fecaf.model;
 
 import jakarta.persistence.*;
 
